@@ -15,6 +15,7 @@ $(document).ready(function(){
     $(".reviews-carousel").slick({
         dots: false,
         infinite: true,
+        arrows: false,
         accessibility: false,
         autoplay: true,
         mobileFirst: true,

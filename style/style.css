@@ -4,6 +4,7 @@ html {
 }
 
 *, *:after, *:before {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -327,6 +328,7 @@ header .navbar-btn.active ~ nav {
 .reviews {
   background: black;
   color: white;
+  padding: 40px 0;
 }
 .reviews h2 {
   padding: 40px;
@@ -336,23 +338,31 @@ header .navbar-btn.active ~ nav {
     padding: 20px;
   }
 }
-.reviews .review {
+.reviews .reviews-carousel .slick-list {
+  overflow-y: visible;
+}
+.reviews .reviews-carousel .slick-list .review {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 20px;
   background: white;
   color: black;
-  margin: 20px;
-  width: 300px;
+  margin: 10px;
+  width: 270px;
   height: 400px;
+  transition: transform 0.3s;
+}
+.reviews .reviews-carousel .slick-list .review.slick-center {
+  transform: scale(1.1);
 }
 @media screen and (min-width: 899px) {
-  .reviews .review {
+  .reviews .reviews-carousel .slick-list .review {
+    margin: 20px;
     width: 500px;
   }
 }
-.reviews .review .review__author {
+.reviews .reviews-carousel .slick-list .review .review__author {
   text-align: right;
 }
 

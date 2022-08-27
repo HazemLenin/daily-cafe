@@ -1,6 +1,7 @@
 .reviews {
     background: black;
     color: white;
+    padding: 40px 0;
     
     h2 {
         padding: 40px;
@@ -10,23 +11,36 @@
         }
     }
 
-    .review {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 20px;
-        background: white;
-        color: black;
-        margin: 20px;
-        width: 300px;
-        height: 400px;
+    .reviews-carousel {
 
-        @include breakpoint(medium) {
-            width: 500px;
-        }
+        .slick-list {
+            overflow-y: visible;
 
-        .review__author {
-            text-align: right;
+            .review {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 20px;
+                background: white;
+                color: black;
+                margin: 10px;
+                width: 270px;
+                height: 400px;
+                transition: transform .3s; // same speed of the carousel
+                
+                &.slick-center {
+                    transform: scale(1.1);
+                }
+                
+                @include breakpoint(medium) {
+                    margin: 20px;
+                    width: 500px;
+                }
+                
+                .review__author {
+                    text-align: right;
+                }
+            }
         }
     }
 }
