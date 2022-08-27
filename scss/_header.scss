@@ -2,14 +2,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: $header-height;
     padding: 0 40px;
     color: white;
     z-index: 50;
 
     .logo {
         font-family: $logo-font;
-        font-size: 2rem;
+        font-size: 1.6rem;
 
         &.logo-mobile {
             display: block;
@@ -39,6 +39,7 @@ header {
         background: black;
         transition: all .3s;
         overflow: hidden;
+        z-index: 50;
 
         ul {
             list-style: none;

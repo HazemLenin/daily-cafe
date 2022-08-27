@@ -1,16 +1,14 @@
 html {
-  font-size: 100%;
+  font-size: calc(1rem + 0.5vw);
   scroll-behavior: smooth;
 }
 
 *, *:after, *:before {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-size: calc(1rem + 0.5vw);
   font-family: "Raleway", sans-serif;
 }
 
@@ -74,8 +72,8 @@ button {
   width: 200px;
   height: 50px;
   margin: 0 auto;
+  font-size: 1rem;
   transition: all 0.3s;
-  font-size: 1.2rem;
 }
 
 .btn-primary {
@@ -105,7 +103,7 @@ header {
 }
 header .logo {
   font-family: "Dancing Script", cursive;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 header .logo.logo-mobile {
   display: block;
@@ -137,6 +135,7 @@ header nav {
   background: black;
   transition: all 0.3s;
   overflow: hidden;
+  z-index: 50;
 }
 header nav ul {
   list-style: none;
@@ -189,13 +188,12 @@ header .navbar-btn.active ~ nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100vh;
+  height: 100vh;
 }
 .hero .background-fade {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-image: linear-gradient(0deg, rgba(255, 255, 255, 0), 30%, rgb(0, 0, 0) 80%);
-  z-index: 0;
 }
 @media screen and (min-width: 899px) {
   .hero .background-fade {
@@ -205,23 +203,24 @@ header .navbar-btn.active ~ nav {
 .hero .hero-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 100px;
   width: 100%;
-  padding: 40px;
-}
-.hero .hero-content h1 {
-  color: white;
-  font-size: 4rem;
-  width: 100%;
+  height: calc(100% - 100px);
+  padding: 0 40px;
 }
 @media screen and (min-width: 899px) {
   .hero .hero-content {
     max-width: 40%;
     margin: 0 0 0 auto;
-    gap: 300px;
   }
+}
+.hero .hero-content h1 {
+  color: white;
+  font-size: 3.6rem;
+  width: 100%;
+}
+@media screen and (min-width: 899px) {
   .hero .hero-content h1 {
     width: auto;
   }
@@ -252,15 +251,7 @@ header .navbar-btn.active ~ nav {
   justify-content: space-between;
   padding: 40px;
   gap: 40px;
-}
-@media screen and (min-width: 899px) {
-  .about .description {
-    padding: 80px;
-    gap: auto;
-  }
-}
-.about .description p {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 .about .image {
   background-position: center;
@@ -434,5 +425,5 @@ footer {
   background: white;
   color: gray;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=style.css.map */
