@@ -1,0 +1,60 @@
+.about {
+    grid-template-areas:
+                    "desc1 img1"
+                    "img2 desc2";
+
+    overflow: hidden;
+
+    @include breakpoint(medium) {
+        display: grid;
+    }
+
+    .grid-cell {
+        height: 100vw;
+        @include breakpoint(medium) {
+            height: 50vw;
+            width: 50vw;
+        }
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px;
+
+        @include breakpoint(medium) {
+            padding: 80px;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+    }
+
+    .image {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .about__description1 {
+        grid-area: desc1;
+    }
+
+    .about__image1 {
+        grid-area: img1;
+        background-image: url("../images/coffee-square.jpg");
+        
+    }
+
+    .about__description2 {
+        grid-area: desc2;
+
+    }
+
+    .about__image2 {
+        grid-area: img2;
+        background-image: url("../images/barista-using-coffee-machine-cafe-square.jpg");
+    }
+}

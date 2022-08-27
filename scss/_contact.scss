@@ -1,0 +1,74 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(medium) {
+        flex-direction: row-reverse;
+
+        .col {
+            width: 50%;
+        }
+    }
+
+    h2 {
+        margin: 0 0 20px 0;
+    }
+
+    .contact__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px;
+
+        .social-nav {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin: 20px 0 0 0;
+            font-size: 2rem;
+            
+            .social-item {
+                display: block;
+                color: black;
+                transition: all .3s;
+
+                &:hover {
+                    transform: scale(1.1)
+                }
+            }
+        }
+    }
+
+    .contact__form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../images/burrito.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 20px 0;
+        color: white;
+        
+        form {
+            background: black;
+            width: 70%;
+            padding: 20px;
+
+            h3 {
+                margin: 0 0 20px 0;
+            }
+
+            .form-group {
+                margin: 20px 0;
+
+                input {
+                    height: 40px;
+                }
+
+                input, textarea {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

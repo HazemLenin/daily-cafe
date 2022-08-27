@@ -1,0 +1,57 @@
+.menu {
+    background: black;
+    color: white;
+    padding: 40px;
+    font-family: $menu-font;
+
+    .vl {
+        display: none;
+
+        @include breakpoint(medium) {
+            display: block;
+            width: 0;
+            height: 600px;
+            border: 2px solid white;
+            margin: 0 80px;
+        } 
+    }
+
+    .menu-lists {
+        @include breakpoint(medium) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 40px 0;
+        }
+
+        .menu-list {
+            list-style: none;
+            width: 100%;
+    
+            .menu-list-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin: 20px 0;
+
+                @include breakpoint(medium) {
+                    margin: 60px 0;
+                }
+    
+                .details-col {
+                    p {
+                        margin: 0 0 0 20px;
+                    }
+                }
+    
+                .price-col {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+
+    a.btn.btn-primary {
+        font-weight: 700;
+    }
+}
