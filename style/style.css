@@ -189,11 +189,11 @@ header .navbar-btn.active ~ nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 .hero .background-fade {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(0deg, rgba(255, 255, 255, 0), 30%, rgb(0, 0, 0) 80%);
   z-index: 0;
 }
@@ -207,9 +207,9 @@ header .navbar-btn.active ~ nav {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 300px;
+  gap: 100px;
   width: 100%;
-  padding: 0 40px 40px 40px;
+  padding: 40px;
 }
 .hero .hero-content h1 {
   color: white;
@@ -220,6 +220,7 @@ header .navbar-btn.active ~ nav {
   .hero .hero-content {
     max-width: 40%;
     margin: 0 0 0 auto;
+    gap: 300px;
   }
   .hero .hero-content h1 {
     width: auto;
@@ -236,10 +237,11 @@ header .navbar-btn.active ~ nav {
   }
 }
 .about .grid-cell {
-  height: 100vw;
+  min-height: 100vw;
 }
 @media screen and (min-width: 899px) {
   .about .grid-cell {
+    min-height: auto;
     height: 50vw;
     width: 50vw;
   }
@@ -249,10 +251,12 @@ header .navbar-btn.active ~ nav {
   flex-direction: column;
   justify-content: space-between;
   padding: 40px;
+  gap: 40px;
 }
 @media screen and (min-width: 899px) {
   .about .description {
     padding: 80px;
+    gap: auto;
   }
 }
 .about .description p {

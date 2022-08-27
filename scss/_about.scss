@@ -10,8 +10,9 @@
     }
 
     .grid-cell {
-        height: 100vw;
+        min-height: 100vw;
         @include breakpoint(medium) {
+            min-height: auto;
             height: 50vw;
             width: 50vw;
         }
@@ -22,9 +23,11 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 40px;
+        gap: 40px;
 
         @include breakpoint(medium) {
             padding: 80px;
+            gap: auto;
         }
 
         p {
